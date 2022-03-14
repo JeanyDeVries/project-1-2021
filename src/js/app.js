@@ -17,4 +17,4 @@ window.addEventListener("offline", function() {
     checkError('noInternet');
 });
 
-onload = fetchData(url, config);
+//onload = fetchData(url, config);

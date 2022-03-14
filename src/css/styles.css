@@ -8,6 +8,11 @@
     --grey: rgb(150, 150, 150);
   }
 
+*{
+    box-sizing: border-box;
+}
+
+
 body{
     margin-left: 10px;
     margin-right: 10px;
@@ -26,18 +31,19 @@ a{
     text-align: center;
 }
 
-ul{
+ul, ol{
     list-style-type: none;
+}
+
+hr{
+    border-top: 3px solid var(--grey);
 }
 
   
 /*NAVIGATION*/
 nav>img{
-    background-image: url(/src/images/oba_icon_vertical.png);
-    background-repeat: no-repeat;
     width: 103px;
     height: 200px;
-    background-size: contain;
     position: absolute;
     object-fit: cover;
     flex: 1 1 10px;
@@ -58,6 +64,7 @@ nav>ul li{
     display: flex;
     flex: 1 1 50px;
     padding: 10px;
+    justify-content: center;
 }
 
 nav>ul li a{
@@ -78,4 +85,53 @@ nav>ul li a:active{
     transform: scale(1.8);
 }
 
+/*road map*/
+main>ol{
+    padding: 0;
+    margin: 0 auto;
+    width: 80vw;
+    height: 30vh;
+}
 
+main>ol>li{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: var(--grey);
+    border: 3px solid var(--black);
+    border-radius: 50px;
+    margin-top: 25px;
+}
+
+main>ol>li:hover{
+    background-color: var(--red);
+    border-radius: 50px;
+}
+
+main>ol>li h2{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 5em;
+    text-align: left;
+    padding-left: 20px;
+    margin: 0 auto;
+    color: var(--white);
+}
+
+main>ol>li h3{
+    font-family: 'League Spartan', sans-serif;
+    font-size:  calc(50vw/ 6);
+    padding-left: 20px;
+    margin: 0 auto;
+    margin-left: 80px;
+    color: var(--white);
+    text-align: center;
+    margin-top: 10px;
+}
+
+main>ol>li>div{
+    margin-left: 75px;
+    height: 29.5vh;
+    width: 3px;
+    background-color: #000000;
+    position: absolute;
+}
