@@ -1,1 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&family=Quintessential&family=Roboto+Serif:wght@500&display=swap');
+
+:root {
+    --red: rgb(255, 10, 0);
+    --lightRed: rgb(245, 149, 146);
+    --white: white;
+    --black: #000000;
+    --grey: rgb(150, 150, 150);
+  }
+
+body{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+p{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1em;
+}
+
+a{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.3em;
+    color: var(--black);
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+  
+/*NAVIGATION*/
+nav>img{
+    background-image: url(/src/images/oba_icon_vertical.png);
+    background-repeat: no-repeat;
+    width: 103px;
+    height: 200px;
+    background-size: contain;
+    position: absolute;
+    object-fit: cover;
+    flex: 1 1 10px;
+}
+
+nav>ul{
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    row-gap: 20px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    justify-items: center;
+    margin-left: 100px;
+}
+
+
+nav>ul li{
+    width: 150px;
+    display: flex;
+    flex: 1 1 50px;
+    padding: 10px;
+}
+
 
