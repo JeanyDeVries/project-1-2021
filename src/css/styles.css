@@ -120,7 +120,7 @@ nav>ul li a:active{
 
 /*ROAD MAP*/
 main>ol{
-    width: 80vw;
+    width: 100%;
     height: 30vh;
 }
 
