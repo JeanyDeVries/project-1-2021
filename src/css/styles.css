@@ -50,6 +50,7 @@ nav>img{
     position: absolute;
     object-fit: cover;
     flex: 1 1 10px;
+    z-index: 10;
 }
 
 nav>ul>li>button{
@@ -144,16 +145,22 @@ main>ol>li h2{
     text-align: left;
     padding-left: 20px;
     color: var(--white);
+    position: absolute;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main>ol>li h3{
     font-family: 'League Spartan', sans-serif;
     font-size:  calc(50vw/ 6);
     padding-left: 20px;
-    margin-left: 80px;
     color: var(--white);
     text-align: center;
     margin-top: 10px;
+    position: absolute;
+    width: 100%;
 }
 
 main>ol>li>div{
