@@ -7,13 +7,14 @@ const publicKey = "1e19898c87464e239192c8bfe422f280"
 const url =`${cors}${endpoint}${query}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
 
 import { fetchData } from "./modules/fetch.js";
+import { checkError } from "./modules/error.js";
 
 const config = {
     Authorization: `Bearer ${privateKey}`
   };
 
-if(navigator.onLine){
-    (fetchData(url, config));
-} else {
-    alert('offline');
-}
+window.addEventListener("offline", function() {
+    checkError('noInternet');
+});
+
+onload = fetchData(url, config);
