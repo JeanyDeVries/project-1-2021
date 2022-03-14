@@ -6,19 +6,14 @@ const privateKey = "4289fec4e962a33118340c888699438d"
 const publicKey = "1e19898c87464e239192c8bfe422f280"
 const url =`${cors}${endpoint}${query}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
 
+import { fetchData } from "./modules/fetch.js";
 
-onload = (fetchData(url));
+const config = {
+    Authorization: `Bearer ${privateKey}`
+  };
 
-function fetchData(url){
-    fetch(url)
-        .then(response => {
-            if(response.ok)
-                return response.json();
-        })
-        .then(function(data){
-            console.table(data.results);
-        })
-        .catch((error) => {
-            console.log(error);
-        });
+if(navigator.onLine){
+    (fetchData(url, config));
+} else {
+    alert('offline');
 }
