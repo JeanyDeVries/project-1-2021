@@ -1,6 +1,7 @@
 import { render } from "./renderData.js";
 
 export function fetchData(url, config){
+    //add loading state
     fetch(url)
         .then(response => {
             if(response.ok)
