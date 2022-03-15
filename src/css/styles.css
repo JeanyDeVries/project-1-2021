@@ -257,11 +257,18 @@ main>div>section>ul>li{
     border: 3px solid var(--black);
     border-radius: 10px;
     margin: 10px;
-    flex: 1 1 189px;
+    flex: 1 1 200px;
     width: min-content;
-    max-width: 105px;
-    min-height: 150px;
+    max-width: 150px;
+    min-height: 200px;
     background-color: var(--grey);
+}
+
+main>div>section>ul>li img{
+    max-width: 150px;
+    max-height: 200px;
+    align-self: center;
+    border-radius: 10px;
 }
 
 
