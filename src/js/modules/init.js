@@ -4,7 +4,6 @@ import { checkState } from "./states.js";
 
 export function init(){
     location.hash = 'home';
-    checkState('home');
 
     window.addEventListener("offline", function() {
         checkError('noInternet');
@@ -14,6 +13,9 @@ export function init(){
     window.addEventListener('hashchange', function() {
         if(this.location.hash !== '#home'){
             getData()
+        }
+        else{
+            checkState('home');
         }
       });
 }

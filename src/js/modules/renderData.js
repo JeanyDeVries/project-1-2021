@@ -2,6 +2,7 @@ const main = document.querySelector('main');
 
 export function render(data) {
     const results = data.results;
+    console.log(results)
     results.forEach((item, i) => {
       const html = `
               <article>
