@@ -179,20 +179,19 @@ main>ol>li>ul{
     display: flex;
     flex-wrap: wrap;
     margin-left: 91px;
+    
 }
 
 main>ol>li>ul>li{
-    padding: 10px;
+    display: flex;
     text-decoration: none;
     transition: all .2s ease-in-out;
     margin-bottom: 10px;
-    height: min-content;
     border: 3px solid var(--black);
     border-radius: 10px;
     margin: 10px;
     flex: 1 1 150px;
     width: min-content;
-    text-align: center;
 }
 
 main>ol>li>ul>li a{
@@ -201,6 +200,7 @@ main>ol>li>ul>li a{
     text-decoration: none;
     transition: all .2s ease-in-out;
     font-size: 1.5em;
+    align-self: center;
 }
 
 main>ol>li>ul>li:hover{
@@ -256,13 +256,55 @@ main>ol>li>ul>li:hover{
     }
 
     main>ol>li>div{
+        margin-left: 0px;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    main>ol>li h3{
+        font-size: 1.5em;
+    }
+
+    main>ol>li>div{
+        width: 50px;;
+    }
+
+    main>ol>li h2{
+        font-size: 3em;
+        padding-left: 15px;
+    }
+
+    
+    main>ol>li>ul{
         margin-left: 50px;
     }
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 360px) {
     main>ol>li h3{
         font-size: 1.5em;
+    }
+    main>ol>li>ul>li a{
+        padding: 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: all .2s ease-in-out;
+        font-size: 1em;
+        align-self: center;
+    }
+
+    main>ol>li>div{
+        width: 30px;;
+    }
+
+    main>ol>li h2{
+        font-size: 2em;
+        padding-left: 10px;
+    }
+
+    
+    main>ol>li>ul{
+        margin-left: 30px;
     }
   }
 
