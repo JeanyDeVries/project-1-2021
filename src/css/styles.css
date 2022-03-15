@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&family=Quintessential&family=Roboto+Serif:wght@500&display=swap');
 
 :root {
-    --red: rgb(255, 10, 0);
+    --red: rgb(246,42,19);
     --lightRed: rgb(245, 149, 146);
     --white: white;
     --black: #000000;
@@ -18,6 +18,9 @@
 body{
     margin-left: 250px;
     margin-right: 250px;
+    background-image: url(/src/images/background.png);
+    background-size:cover;
+    height: 100vh;
 }
 
 
@@ -74,11 +77,11 @@ nav>ul>li>button{
 }
 
 nav>ul>li>button:hover{
-    background-color: rgb(206, 12, 6);
+    background-color: var(--red);
 }
 
 nav>ul>li>button:active{
-    background-color: rgb(206, 12, 6);
+    background-color: var(--red);
     transform: scale(1.2);
 }
 
@@ -133,6 +136,7 @@ main>ol>li{
     margin-top: 25px;
     display: flex;
     flex-direction: column;
+    opacity: 0.9;
 }
 
 main>ol>li h2{
@@ -170,7 +174,7 @@ main>ol>li>div{
     z-index: 1;
     background-color: #000000;
     position: absolute;
-    background-color: red;
+    background-color: var(--red);
 }
 
 main>ol>li>ul{
@@ -208,6 +212,13 @@ main>ol>li>ul>li:hover{
 }
 
 /*MEDIA QUERIES*/
+
+@media only screen and (min-width: 1400px) {
+    nav>ul li{
+        flex: 1 1 250px;
+    }
+  }
+
 @media only screen and (max-width: 1100px) {
     body {
       margin-left: 50px;

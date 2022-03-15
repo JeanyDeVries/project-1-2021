@@ -19,6 +19,7 @@ export function getData(){
     query = location.hash;
     query = `${query.substring(1)}`;
     const url = `${cors}${endpoint}${query}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
+    console.log(url)
 
     fetchData(url, config);
 }

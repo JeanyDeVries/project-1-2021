@@ -8,6 +8,7 @@ export function fetchData(url, config){
                 return response.json();
         })
         .then(function(data){
+            console.log(data)
             render(data);
         })
         .catch((error) => {
