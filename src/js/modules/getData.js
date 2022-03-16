@@ -24,6 +24,6 @@ export function getData(){
     fetchData(urlBooks, 'book');
 
     //load audiobooks
-    const urlExcerpts = `${cors}${endpoint}${query}%20bedrijf&${typeExcerpts}&${refine}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
-    fetchData(urlExcerpts, 'excerpt');
+    //const urlExcerpts = `${cors}${endpoint}${query}%20bedrijf&${typeExcerpts}&${refine}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
+    //fetchData(urlExcerpts, 'excerpt');
 }

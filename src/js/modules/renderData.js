@@ -20,7 +20,6 @@ export function render(data, dataType) {
           item.style.display = 'none';
           return;
        }
-       console.log(data.results[i].coverimages)
-       item.style.backgroundImage  = `url(${data.results[i].coverimages})`
+       item.style.backgroundImage  = `url(${data.results[i].coverimages[1]})`
     });
   }
