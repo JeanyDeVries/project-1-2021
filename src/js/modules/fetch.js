@@ -1,9 +1,8 @@
 import { render } from "./renderData.js";
+import { checkState } from "./states.js";
 
 export function fetchData(url, config){
-    //add loading state
-    console.log(url);
-
+    checkState('loading');
     fetch(url)
         .then(response => {
             if(response.ok)

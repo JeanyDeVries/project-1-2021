@@ -11,11 +11,8 @@ const config = {
 };
 
 import { fetchData } from "./fetch.js";
-import { checkState } from "./states.js";
 
 export function getData(){
-    checkState('showResults');
-
     query = location.hash;
     query = `${query.substring(1)}`;
     const url = `${cors}${endpoint}${query}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
