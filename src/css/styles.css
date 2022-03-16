@@ -185,15 +185,15 @@ main>ol>li>div{
 }
 
 main>ol>li>ul{
-    height: 100%;
     width: -webkit-fill-available;
     display: flex;
     column-gap: 50px;
     flex-wrap: wrap;
     margin-left: 91px;
+    flex-direction: row;
 }
 
-main>ol>li>ul>li{
+main>ol>li>ul a{
     display: flex;
     text-decoration: none;
     transition: all .2s ease-in-out;
@@ -203,25 +203,33 @@ main>ol>li>ul>li{
     margin: 10px;
     flex: 1 1 150px;
     width: min-content;
+    height: inherit;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 50px;
 }
 
-main>ol>li>ul>li a{
+main>ol>li>ul>a>li{
     padding: 10px;
     border-radius: 10px;
     text-decoration: none;
     transition: all .2s ease-in-out;
     font-size: 1.5em;
     align-self: center;
+    min-height: 40px;
+    text-align: center;
 }
 
-main>ol>li>ul>li:hover{
+main>ol>li>ul>a:hover{
     box-shadow: var(--grey) 10px -5px 0px 2px ;
 }
 
 /*Results*/
 main>div{
     width: 100%;
-    
+    display: none;
 }
 
 main>div>section{
