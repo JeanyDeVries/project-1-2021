@@ -16,7 +16,6 @@ export function fetchData(url, type){
             render(data);
         })
         .catch((error) => {
-            console.log(error)
             checkState('error');
             checkError(error);
         });

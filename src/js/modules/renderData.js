@@ -1,6 +1,6 @@
 import { checkState } from "./states.js";
 
-let listItems = '';
+let listItems = document.getElementsByClassName("resultBook");
 export function render(data, dataType) {
     checkState('showResults');
     const results = data.results;
@@ -13,11 +13,14 @@ export function render(data, dataType) {
         listItems = document.getElementsByClassName("resultExcerpt");
         break;
     }
-    results.forEach((item, i) => {
-       if(item === undefined){
-          listItems[i].style.display = 'none';
+    let elements = Array.prototype.slice.call( listItems )
+
+    elements.forEach((item, i) => {
+       if(data.results[i] === undefined){
+          item.style.display = 'none';
           return;
        }
-       listItems[i].style.backgroundImage  = `url(${item.coverimages[1]})`
+       console.log(data.results[i].coverimages)
+       item.style.backgroundImage  = `url(${data.results[i].coverimages})`
     });
   }
