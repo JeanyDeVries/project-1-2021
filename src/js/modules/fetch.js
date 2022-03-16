@@ -13,7 +13,7 @@ export function fetchData(url, type){
         })
         .then(function(data){
             console.log(data)
-            render(data);
+            render(data, type);
         })
         .catch((error) => {
             checkState('error');

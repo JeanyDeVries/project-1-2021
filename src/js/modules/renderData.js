@@ -9,17 +9,27 @@ export function render(data, dataType) {
       case 'book':
         listItems = document.getElementsByClassName("resultBook");
         break;
-      case 'excerpt':
-        listItems = document.getElementsByClassName("resultExcerpt");
+      case 'schooltv':
+        listItems = document.getElementsByClassName("resultSchoolTV");
         break;
     }
     let elements = Array.prototype.slice.call( listItems )
 
     elements.forEach((item, i) => {
-       if(data.results[i] === undefined){
+      if(data.results[i] === undefined || data.results[i] === null){
           item.style.display = 'none';
           return;
-       }
-       item.style.backgroundImage  = `url(${data.results[i].coverimages[1]})`
+      }
+      if(dataType === 'book')
+      {
+        item.style.backgroundImage  = `url(${data.results[i].coverimages[1]})`
+      }
+      else
+      {
+        if(`url(${data.results[i].coverimages[1]})` === undefined)
+          item.style.backgroundImage  = `url(${data.results[i].coverimages[0]})`
+        else
+          item.style.backgroundImage  = `url(${data.results[i].coverimages})`
+      }
     });
   }
