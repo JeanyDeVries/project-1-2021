@@ -6,7 +6,8 @@ export function init(){
     location.hash = 'home';
 
     window.addEventListener("offline", function() {
-        checkError('noInternet');
+        checkState('error');
+        checkError();
     });
     
     //only get data when the hash isnt set to home, otherwise home page will be hidden

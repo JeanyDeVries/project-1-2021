@@ -1,3 +1,5 @@
+import { fetchData } from "./fetch.js";
+
 let query = '';
 
 const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
@@ -10,13 +12,11 @@ const config = {
   Authorization: `Bearer ${privateKey}`
 };
 
-import { fetchData } from "./fetch.js";
-
 export function getData(){
     query = location.hash;
     query = `${query.substring(1)}`;
-    const url = `${cors}${endpoint}${query}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
-    console.log(url)
 
-    fetchData(url, config);
+    //load books
+    const url = `${cors}${endpoint}${query}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
+    fetchData(url);
 }

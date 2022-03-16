@@ -1,7 +1,8 @@
 import { render } from "./renderData.js";
 import { checkState } from "./states.js";
+import { checkError } from "./error.js";
 
-export function fetchData(url, config){
+export function fetchData(url){
     checkState('loading');
     fetch(url)
         .then(response => {
@@ -13,6 +14,7 @@ export function fetchData(url, config){
             render(data);
         })
         .catch((error) => {
-            console.log(error);
+            //checkState('error');
+            //checkError(response);
         });
 }
