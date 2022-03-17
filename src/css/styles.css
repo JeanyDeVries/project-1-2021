@@ -207,6 +207,7 @@ main>ol>li>ul a{
     justify-content: center;
     text-align: center;
     min-height: 50px;
+    min-width: 400px;
 }
 
 main>ol>li>ul>a>li{
@@ -378,6 +379,12 @@ main>div>section>ul>li:hover .title {
     body {
       margin-left: 50px;
       margin-right: 50px;;
+    }
+  }
+
+  @media only screen and (max-width: 650px){
+    main>ol>li>ul a{
+        min-width: 200px;
     }
   }
 
