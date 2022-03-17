@@ -274,6 +274,53 @@ main>div>section>ul>li{
     background-size: contain;
 }
 
+main>div>section>ul>li{
+    display: flex;
+    text-decoration: none;
+    position: relative;
+    transition: all .2s ease-in-out;
+    margin-bottom: 10px;
+    border: 3px solid var(--black);
+    border-radius: 10px;
+    margin: 10px;
+    flex: 1 1 200px;
+    width: min-content;
+    max-width: 150px;
+    min-height: 200px;
+    background-color: var(--grey);
+    background: center;
+    background-size: contain;
+}
+
+.title{
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--grey);
+    align-self: center;
+    opacity: 0.9;
+    visibility: hidden;
+    z-index: 100;
+
+    color: var(--white);
+
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main>div>section>ul>li:hover .title {
+    visibility: visible;
+}
+
 .loadingRing {
     width: 100%;
     height: 100%;
