@@ -17,19 +17,19 @@ export function render(data, dataType) {
 
     elements.forEach((item, i) => {
       if(data.results[i] === undefined || data.results[i] === null){
-          item.style.display = 'none';
+          item.style.setProperty('display', 'none');
           return;
       }
       if(dataType === 'book')
       {
-        item.style.backgroundImage  = `url(${data.results[i].coverimages[1]})`
+        item.style.setProperty('background-image', `url(${data.results[i].coverimages[1]})`)
       }
       else
       {
         if(`url(${data.results[i].coverimages[1]})` === undefined)
-          item.style.backgroundImage  = `url(${data.results[i].coverimages[0]})`
+          item.style.setProperty('background-image', `url(${data.results[i].coverimages[0]})`)
         else
-          item.style.backgroundImage  = `url(${data.results[i].coverimages})`
+          item.style.setProperty('background-image', `url(${data.results[i].coverimages})`)
       }
     });
   }
