@@ -24,7 +24,9 @@ export function render(data, dataType) {
           item.style.setProperty('display', 'none');
           return;
       }
-      
+      else
+        item.style.setProperty('display', 'block');
+
       //Some datatypes use a different value in the array
       if(dataType === 'book' || dataType === 'audiobook')
       {
@@ -39,3 +41,4 @@ export function render(data, dataType) {
       }
     });
   }
+
