@@ -9,6 +9,9 @@ export function render(data, dataType) {
       case 'book':
         listItems = document.getElementsByClassName("resultBook");
         break;
+      case 'audiobook':
+        listItems = document.getElementsByClassName("resultListenBook");
+        break;
       case 'schooltv':
         listItems = document.getElementsByClassName("resultSchoolTV");
         break;
@@ -20,7 +23,8 @@ export function render(data, dataType) {
           item.style.setProperty('display', 'none');
           return;
       }
-      if(dataType === 'book')
+      
+      if(dataType === 'book' || dataType === 'audiobook')
       {
         item.style.setProperty('background-image', `url(${data.results[i].coverimages[1]})`)
       }
