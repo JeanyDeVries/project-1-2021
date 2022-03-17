@@ -19,10 +19,6 @@ export function render(data, dataType) {
     let elements = Array.prototype.slice.call( listItems )
 
     elements.forEach((item, i) => {
-      let title = item.querySelector('.title');
-      if(title !== null)
-        title.textContent = `${data.results[i].titles[0]}`
-
       //If there are no results hide the list item
       if(data.results[i] === undefined || data.results[i] === null){
           item.style.setProperty('display', 'none');
@@ -30,6 +26,10 @@ export function render(data, dataType) {
       }
       else
         item.style.setProperty('display', 'block');
+
+      let title = item.querySelector('.title');
+      if(title !== null)
+        title.textContent = `${data.results[i].titles[0]}`
 
       //Some datatypes use a different value in the array
       if(dataType === 'book' || dataType === 'audiobook')
