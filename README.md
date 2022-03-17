@@ -1,12 +1,12 @@
+# OBA entrepeneur
 
-
-# Table of contents
+## Table of contents
 [Concept](#Concept)  
 [Install](#Install)  
 
 
-# Concept <a name="Concept">
-## User story 
+## Concept <a name="Concept">
+ User story: 
 'As a young entrepeneur I want more information about setting up a company, to set up more of a succes'
 
 This is the user story I worked with. The concept I made is a road map of the big steps of starting a company.
