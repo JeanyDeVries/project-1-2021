@@ -1,7 +1,6 @@
 import { errorText } from "./states.js";
 
 export async function checkError(response){
-    console.log(response);
     if(response.status === 403 || response.status === 401){
         errorText.textContent = "Geen toegang, vraag aan bij: https://cors-anywhere.herokuapp.com/corsdemo";
     }
@@ -14,8 +13,10 @@ export async function checkError(response){
     else if(response.status === 429){
         errorText.textContent = "De server heeft teveel requests";
     }
+    else if(!response){
+        errorText.textContent = response;
+    }
     else{
-        if(!response)
-            errorText.textContent = response;
+        console.log(response);
     }
 }
