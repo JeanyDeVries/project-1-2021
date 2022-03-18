@@ -24,12 +24,11 @@ export function render(data, dataType) {
           item.style.setProperty('display', 'none');
           return;
       }
-      else
+      else{
         item.style.setProperty('display', 'block');
-
-      let title = item.querySelector('.title');
-      if(title !== null)
+        let title = item.querySelector('.title');
         title.textContent = `${data.results[i].titles[0]}`
+      }
 
       //Some datatypes use a different value in the array
       if(dataType === 'book' || dataType === 'audiobook')
