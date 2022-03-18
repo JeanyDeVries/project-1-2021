@@ -21,14 +21,14 @@ export function getData(){
     query = `${query.substring(1)}`;
 
     //load books
-    const urlBooks = `${cors}${endpoint}${query}&${typeBook}&${refine}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
+    const urlBooks = `${cors}${endpoint}${query}%20bedrijf&${typeBook}&${refine}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
     fetchData(urlBooks, 'book');
 
     //load listening books
-    const urlListenBooks = `${cors}${endpoint}${query}&${typeAudioBook}&${refine}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
+    const urlListenBooks = `${cors}${endpoint}${query}%20bedrijf&${typeAudioBook}&${refine}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
     fetchData(urlListenBooks, 'audiobook');
 
     //load schooltv
-    const urlExcerpts = `${cors}${endpoint}${query}&${typeExcerpts}&${refine}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
+    const urlExcerpts = `${cors}${endpoint}${query}%20bedrijf&${typeExcerpts}&${refine}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
     fetchData(urlExcerpts, 'schooltv');
 }
