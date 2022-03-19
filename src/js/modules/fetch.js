@@ -13,6 +13,9 @@ export function fetchData(url, type){
         })
         .then(function(data){
             console.log(data)
+            if(type === 'secondAPI'){
+                return;
+            }
             render(data, type);
         })
         .catch((error) => {

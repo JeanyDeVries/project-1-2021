@@ -31,4 +31,8 @@ export function getData(){
     //load schooltv
     const urlExcerpts = `${cors}${endpoint}${query}%20bedrijf&${typeExcerpts}&${refine}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
     fetchData(urlExcerpts, 'schooltv');
-}
+
+    //load second API
+    const urlSecondAPI = `${cors}http://obaliquid.staging.aquabrowser.nl/onderwijs/api/v1/search/?q=bedrijf&refine=true&authorization=${publicKey}&output=json`
+    fetchData(urlSecondAPI, 'secondAPI');
+  }
